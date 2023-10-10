@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import LogInPage from './pages/LogInPage.js';
+import Main from './pages/Main.js'
+import React from 'react';
 function App() {
+  var loggedIn = false;
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!loggedIn && <LogInPage />}
+      {loggedIn && <Main />}
     </div>
   );
 }
