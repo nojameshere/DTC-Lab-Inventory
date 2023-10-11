@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './LogInPage.css';
+import '../css/LogInPage.css';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 
 
