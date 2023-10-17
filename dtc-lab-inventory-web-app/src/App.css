@@ -1,9 +1,14 @@
 /* App.css */
 .App {
   display: flex;
-  flex: 1;
   height: 100%;
-  width: 100%;
+}
+.appContainer{
+  flex: 1;
   background-color: #A73439; /* Your desired background color */
+  overflow: hidden;
+  justify-content: center;
+}
+body{
   overflow: hidden;
 }

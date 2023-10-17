@@ -8,7 +8,6 @@ import { getAuth } from 'firebase/auth';
 const firebaseConfig = {
   //firebase config needs to be put here. This will be done in a .env file and will
   //need to be otained from George Ray
-  //Some of these will not be needed as I am reusing stuff from another project
   //doing config like this is secure, if you ever fork and re-upload to github please
   //make sure your .env file is on your gitignore list.
   apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
@@ -38,8 +37,10 @@ function App() {
 
   return (
     <div className="App">
-      {!loggedIn && <LogInPage />}
-      {loggedIn && <Main />}
+      <div className='appContainer'>
+        {loggedIn && <LogInPage />}
+        {loggedIn && <Main />}
+      </div>
     </div>
   );
 }
